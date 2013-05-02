@@ -1,7 +1,9 @@
 easy-grid
 =========
 
-Semantic grid system using margins
+A semantic Sass grid system using margins.
+
+Allows grid items with background colors and padding for immediate content instead of needing a separate
 
 ##KNOWN ISSUES
 - gutter needs to be percentage based
@@ -9,8 +11,8 @@ Semantic grid system using margins
 
 
 ##TODO
-- test further
-- add bottom margin to grid-container?
-- move margin-bottom to grid-container instead of removing from last-child?
-- how to reset $columns on the next grid-container if it's been redefined
-- change names of nested boxes/classes to be clearer
+- [ ] test further
+- [ ] add bottom margin to grid-container?
+- [ ] move margin-bottom to grid-container instead of removing from last-child?
+- [ ] how to reset $columns on the next grid-container if it's been redefined
+- [ ] change names of nested boxes/classes to be clearer
