@@ -39,7 +39,7 @@ $columns: $columns;
   @if ($span != $columns or $span > $columns) {
     margin-right: $margin-right;
   }
-  margin-bottom: $spacing;
+  margin-bottom: $gutter; // using $gutter instead of $spacing to keep grid items spaced eually sides and bottom
   background: #ededed; // testing
   &:last-of-type {
     margin-right: 0;
