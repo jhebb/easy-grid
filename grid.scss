@@ -11,7 +11,7 @@ $total: 100%;
 // Grid Container mixin
 @mixin grid-container() {
   //clear: both;
-  margin-bottom: $gutter;
+  margin-bottom: $spacing;
   &:before,
   &:after {
     content: "";
