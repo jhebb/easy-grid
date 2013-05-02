@@ -3,6 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
 $gutter: 2%;
+$spacing: 1em; // this is more for visuals and demos, should be set per project?
 $columns: 5 !default;
 $total: 100%;
 
@@ -38,7 +39,7 @@ $columns: $columns;
   @if ($span != $columns or $span > $columns) {
     margin-right: $margin-right;
   }
-  margin-bottom: $gutter;
+  margin-bottom: $spacing;
   background: #ededed; // testing
   &:last-of-type {
     margin-right: 0;
