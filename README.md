@@ -8,6 +8,7 @@ Allows grid items with background colors and padding for immediate content inste
 ##KNOWN ISSUES
 - gutter needs to be percentage based
 - grid containers that don't fit full-width don't clear grid containers below them. May need "clear: both" on grid containers.
+- margin-bottom is inconsistent since it's percentage-based for grid-items and fixed for grid-container. Need a best of both. Maybe add an option to mixin for margin-bottom
 
 
 ##TODO
