@@ -3,12 +3,12 @@ easy-grid
 
 Semantic grid system using margins
 
-* KNOWN ISSUES
+##KNOWN ISSUES
 - gutter needs to be percentage based
 - grid containers that don't fit full-width don't clear grid containers below them. May need "clear: both" on grid containers.
 
 
-* TODO
+##TODO
 - test further
 - add bottom margin to grid-container?
 - move margin-bottom to grid-container instead of removing from last-child?
