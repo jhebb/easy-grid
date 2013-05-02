@@ -33,7 +33,7 @@ $columns: $columns;
     $span: $columns;
   }
   @include box-sizing(border-box);
-  padding: 1em;
+  padding: $spacing;
   float: left;
   width: ( ($total - ( ($columns - 1) * $gutter ) ) * ($span/$columns) ) + ( ($span - 1) * $gutter);
   @if ($span != $columns or $span > $columns) {
@@ -64,7 +64,7 @@ h1 {
   margin: 0 auto;
   background: #fff;
   @include grid-container;
-  padding: 1em;
+  padding: $spacing;
 }
 .header, .footer {
   background: red;
