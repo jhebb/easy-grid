@@ -155,6 +155,10 @@ h1 {
       [class*='d-level'] {
         $columns: 4;
         @include grid-item(2);
+        &:nth-child(2) {
+          @include grid-item(2,0);
+          background: #aaa;
+        }
         background: #aaa;
       }
     }
