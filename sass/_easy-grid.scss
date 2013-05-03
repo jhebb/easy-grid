@@ -38,7 +38,7 @@ $columns: $columns;
   float: left;
   width: ( ($total - ( ($columns - 1) * $gutter ) ) * ($span/$columns) ) + ( ($span - 1) * $gutter);
   @if ($span != $columns or $span > $columns) {
-    margin-right: $margin-right;
+    margin-right: $margin-right; // @TODO - try changing to margin-left and always hiding first-child
   }
   margin-bottom: $gutter; // using $gutter instead of $spacing to keep grid items spaced eually sides and bottom
   background: #ededed; // testing
