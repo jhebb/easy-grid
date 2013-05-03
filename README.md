@@ -3,7 +3,7 @@ easy-grid
 
 A semantic Sass grid system using margins.
 
-Allows grid items with background colors and padding for immediate content instead of needing a separate
+Allows grid items with background colors and padding for immediate content instead of needing a wrapper on each grid item.
 
 By: [Justin Hebb](http://jukah.com)
 
