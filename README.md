@@ -5,6 +5,9 @@ A semantic Sass grid system using margins.
 
 Allows grid items with background colors and padding for immediate content instead of needing a separate
 
+##DEMO
+http://jhebb.github.io/easy-grid/
+
 ##KNOWN ISSUES
 - gutter needs to be percentage based
 - grid containers that don't fit full-width don't clear grid containers below them. May need "clear: both" on grid containers.
