@@ -1,0 +1,143 @@
+// typical layout test
+
+body {
+	background: url(../img/grey_wash_wall.png) 350px 259px #333;
+	padding: 2em 10em;
+	font-family: 'Oxygen', sans-serif;
+	font-weight: 300;
+	color: #fff;
+	a {
+	color: #fff;
+		&:hover {
+			color: darken(#fff, 10%);
+		}
+	}
+}
+h1 {
+	color: #fff;
+	font-size: 2em;
+}
+#container {
+	//max-width: 1200px;
+	margin: 0 auto;
+	background: #fff;
+	@include grid-container;
+	padding: $spacing;
+	color: #333;
+	a {
+		color: #333;
+		&:hover {
+			color: lighten(#333, 10%);
+		}
+	}
+}
+.header, .footer {
+	background: red;
+	@include grid-container;
+	@include grid-item(8);
+}
+
+.content {
+	@include grid-container;
+}
+
+.main {
+	@include grid-item(1);
+}
+
+.sidebar {
+	@include grid-item(3);
+}
+
+.sidebar2 {
+	@include grid-item(1);
+}
+
+// Lots of boxes test
+.box1 {
+	@include grid-item(5);
+}
+.box2 {
+	@include grid-item(2.5);
+}
+.box3 {
+	@include grid-item(2.5);
+}
+.box4 {
+	@include grid-item(1);
+}
+.box5 {
+	@include grid-item(1);
+}
+.box6 {
+	@include grid-item(1);
+}
+.box7 {
+	@include grid-item(1);
+}
+.box8 {
+	@include grid-item(1);
+}
+.boxwrap {
+	@include grid-container;
+}
+
+/* Nested Tests */
+.nest1, .nest2 {
+	@include grid-container;
+}
+.nest1 {
+	$columns: 6;
+	[class*='nestbox']  {
+	@include grid-item(2);
+	div {
+		background: #ccc;
+	}
+	}
+}
+.nest2 {
+	$columns: $columns;
+	[class*='nestbox']  {
+	@include grid-item(2);
+	}
+	.nestbox1 {
+	$columns: 5;
+	@include grid-container;
+	[class*='subnestbox'] {
+		@include grid-item(5);
+	}
+	}
+	.nestbox2 {
+	$columns: 3;
+	div:nth-child(3n+1) {
+		@include grid-item(2);
+	}
+	div:nth-child(3n+2) {
+		@include grid-item(1,0);
+	}
+	div:nth-child(3n+3) {
+		@include grid-item(3);
+		@include grid-container;
+		[class*='d-level'] {
+		$columns: 4;
+		@include grid-item(2);
+		&:nth-child(2) {
+			@include grid-item(2,0);
+			background: #aaa;
+		}
+		background: #aaa;
+		}
+	}
+	}
+	[class*='subnestbox'] {
+	background: #ccc !important;
+	}
+}
+
+
+@media all and (max-width: 768px) {
+	$columns: 6;
+	.main, .sidebar, .sidebar2 {
+	@include grid-item(2);
+	}
+}
